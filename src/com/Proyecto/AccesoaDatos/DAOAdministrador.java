@@ -1,4 +1,4 @@
-package com.Proyecto.ServiciosdeDominio;
+package com.Proyecto.AccesoaDatos;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import javax.faces.model.SelectItem;
 
 import com.Proyecto.Modelo.Administrador;
+import com.Proyecto.ServiciosdeDominio.DAOManager;
 
 
 public class DAOAdministrador {

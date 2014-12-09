@@ -38,42 +38,7 @@ public class DAOManager {
 	}
 
 	
-	public boolean Registrar(String nombre) {
-		Connection conexion = null;
-		boolean bandera = false;
-		try {
-			conexion = this.Conectar();
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			PreparedStatement SQL = conexion
-					.prepareStatement("insert into administradores (ID,Nombre) values(0,?)");
-			SQL.setString(1, nombre);
-			if (SQL.execute()) {
-				bandera = true;
-			} else {
-				bandera = false;
-			}
-
-			SQL.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		try {
-			conexion.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		return bandera;
-
-	}
-
+	
 	public ArrayList<?> getUsuarios(String consulta) {
 		ResultSet resultado = null;
 		Connection conexion = null;

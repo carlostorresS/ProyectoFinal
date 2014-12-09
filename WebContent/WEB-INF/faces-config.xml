@@ -20,5 +20,15 @@
 		<managed-bean-class>com.Proyecto.Sesiones.SessionManager</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>ruta</managed-bean-name>
+		<managed-bean-class>com.Proyecto.Modelo.Ruta</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>daoRuta</managed-bean-name>
+		<managed-bean-class>com.Proyecto.AccesoaDatos.DAORuta</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>
