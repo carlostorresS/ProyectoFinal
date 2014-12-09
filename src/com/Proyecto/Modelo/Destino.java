@@ -6,6 +6,18 @@ private float longitud;
 private float latitud;
 private String destino;
 private int idRuta;
+
+public Destino(){
+	
+}
+public Destino(int ID, String Destino, float latitud, float longitud) {
+	this.idDestino=ID;
+	this.destino=Destino;
+	this.latitud=latitud;
+	this.longitud=longitud;
+	
+}
+
 /**
  * @return the idDestino
  */

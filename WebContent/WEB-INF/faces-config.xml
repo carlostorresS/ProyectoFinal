@@ -40,5 +40,15 @@
 		<managed-bean-class>com.Proyecto.AccesoaDatos.DAOAdministrador</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>daoDestino</managed-bean-name>
+		<managed-bean-class>com.Proyecto.AccesoaDatos.DAODestino</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>destino</managed-bean-name>
+		<managed-bean-class>com.Proyecto.Modelo.Destino</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>
