@@ -50,5 +50,15 @@
 		<managed-bean-class>com.Proyecto.Modelo.Destino</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>posicion</managed-bean-name>
+		<managed-bean-class>com.Proyecto.Modelo.Posicion</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>daoPosiciones</managed-bean-name>
+		<managed-bean-class>com.Proyecto.AccesoaDatos.DAOPosiciones</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>
