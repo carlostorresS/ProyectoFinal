@@ -15,5 +15,10 @@
 		<managed-bean-class>com.Proyecto.ServiciosdeDominio.DAOAdministrador</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>sesion</managed-bean-name>
+		<managed-bean-class>com.Proyecto.Sesiones.SessionManager</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>

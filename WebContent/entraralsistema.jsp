@@ -47,11 +47,12 @@
          
           </div>
     </header>
+	    
 	
 	
 	
 	 
-	<f:view>
+	<f:view> 
 		<h:form>
 		<center>
 <h:outputText value="selecione al administrador"></h:outputText>
@@ -59,7 +60,7 @@
  
 <h:selectOneMenu value="#{administrador.nombre}">  
     <f:selectItems value="#{dAOAdministrador.mostrarTodos()}" />  
-</h:selectOneMenu>  
+</h:selectOneMenu>    
 
 
 <h:inputSecret value="#{administrador.password}"></h:inputSecret>   
@@ -70,7 +71,7 @@
 		 		  
 				    
 				<h:commandButton  styleClass=" btn btn-default" value="volver" ></h:commandButton>
-				<h:commandButton styleClass="btn btn-default"  value="iniciarSesion" ></h:commandButton>
+				<h:commandButton styleClass="btn btn-default"  value="inicia sesion" action="#{sesion.validarSesion(administrador) }" ></h:commandButton>
 		</center>
 		</h:form>
 

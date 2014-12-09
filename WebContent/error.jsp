@@ -9,8 +9,7 @@
 </head>
 <body>
 <f:view>
-<h:outputText value="HOLA"></h:outputText>
-hola tu sesion es correcta
+La sesion es incorrecta, tal vez es tu contraseña
 </f:view>
 </body>
 </html>
