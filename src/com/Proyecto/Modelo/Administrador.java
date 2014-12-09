@@ -4,6 +4,15 @@ public class Administrador {
  private String nombre;
  private int ID;
  private String password;
+public Administrador(int ID, String password,String nombre) {
+this.ID=ID;
+this.nombre=nombre;
+this.password=password;
+}
+public Administrador(){
+	
+}
+
 /**
  * @return the nombre
  */

@@ -12,6 +12,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import com.Proyecto.Modelo.Administrador;
+
 //Prueba para ver si funciona la conexion a la base de datos
 
 public class DAOManager {
@@ -72,53 +74,58 @@ public class DAOManager {
 
 	}
 
-//	public ArrayList<?> getUsuarios(String consulta) {
-//		ResultSet resultado = null;
-//		Connection conexion = null;
-//		int i=0;
-//		ArrayList<Object> lista = new ArrayList<Object>();
-//		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-//		} catch (ClassNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		try {
-//			conexion = this.Conectar();
-//
-//		} catch (SQLException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//		try {
-//			java.sql.Statement SQL = conexion.createStatement();
-//			resultado = SQL.executeQuery(consulta);
-//
-//			while (resultado.next()) {
-//				 lista.add(i,new Usuario(resultado.getInt(1),resultado.getString(2)
-//                         ,resultado.getInt(3),resultado.getInt(4),resultado.getInt(5)));
-//                           i++;
-//
-//			}
-//
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//
-//		try {
-//			conexion.close();
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return lista;
-//
-//	}
+	public ArrayList<?> getUsuarios(String consulta) {
+		ResultSet resultado = null;
+		Connection conexion = null;
+		int i=0;
+		ArrayList<Object> lista = new ArrayList<Object>();
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			conexion = this.Conectar();
+
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			java.sql.Statement SQL = conexion.createStatement();
+			resultado = SQL.executeQuery(consulta);
+
+			while (resultado.next()) {
+				 lista.add(i,new Administrador(resultado.getInt(1),resultado.getString(2)
+                         ,resultado.getString(3)));
+                           i++;
+                  
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			conexion.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lista;
+
+	}
+	
+	
+	
+	
 	
 	
 	
