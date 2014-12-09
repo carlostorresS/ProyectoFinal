@@ -20,7 +20,7 @@ hola tu sesion es correcta
 <h:outputLink ><h:outputText value="registrarRuta"></h:outputText></h:outputLink>
 <h:form>
 <h:inputText value="#{ruta.nombreRuta}"></h:inputText>
-<h:commandButton value="dar de alta" action="#{daoRuta.registro(ruta) }" ></h:commandButton>
+<h:commandButton value="dar de alta" action="#{daoRuta.registro(ruta,ruta) }" ></h:commandButton>
 </h:form>
 
 
@@ -34,7 +34,7 @@ hola tu sesion es correcta
 <h:selectOneMenu value="#{ruta.nombreRuta}">  
     <f:selectItems value="#{daoRuta.listar()}" />  
 </h:selectOneMenu>    
-<h:commandButton value="eliminar la ruta" action="#{daoRuta.borrar(ruta)}"></h:commandButton>
+<h:commandButton value="eliminar la ruta" action="#{daoRuta.borrar(ruta,ruta)}"></h:commandButton>
 </h:form>
 
 

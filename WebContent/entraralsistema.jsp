@@ -59,7 +59,7 @@
 
  
 <h:selectOneMenu value="#{administrador.nombre}">  
-    <f:selectItems value="#{dAOAdministrador.mostrarTodos()}" />  
+    <f:selectItems value="#{daoadmin.listar()}" />  
 </h:selectOneMenu>    
 
 
