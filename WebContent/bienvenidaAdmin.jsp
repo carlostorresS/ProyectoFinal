@@ -21,13 +21,12 @@ hola tu sesion es correcta
 <h:form>
 <h:inputText value="#{ruta.nombreRuta}"></h:inputText>
 <h:commandButton value="dar de alta" action="#{daoRuta.registro(ruta) }" ></h:commandButton>
-
-
-
-
-
-
 </h:form>
+
+
+
+
+
 
 <h:outputLink><h:outputText value="eliminar  Ruta"></h:outputText></h:outputLink>
 
@@ -35,12 +34,18 @@ hola tu sesion es correcta
 <h:selectOneMenu value="#{ruta.nombreRuta}">  
     <f:selectItems value="#{daoRuta.listar()}" />  
 </h:selectOneMenu>    
-<h:commandButton value="eliminar la ruta" action="#{daoRuta.borrar(ruta) }"></h:commandButton>
-
+<h:commandButton value="eliminar la ruta" action="#{daoRuta.borrar(ruta)}"></h:commandButton>
 </h:form>
 
 
+<h:form>
+Marca de camion<h:inputText value="#{marca.nombreMarca}"></h:inputText>
+id de ruta<h:inputText value="#{ruta.ID}" ></h:inputText>
+<h:commandButton  value="registrar marca" action="#{dAOMarca.registro(marca,ruta)}"></h:commandButton>
+</h:form>
 
+
+ 
 </f:view>
 </body>
 </html>

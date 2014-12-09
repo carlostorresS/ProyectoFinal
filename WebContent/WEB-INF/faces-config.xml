@@ -30,5 +30,15 @@
 		<managed-bean-class>com.Proyecto.AccesoaDatos.DAORuta</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>marca</managed-bean-name>
+		<managed-bean-class>com.Proyecto.Modelo.Marca</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>dAOMarca</managed-bean-name>
+		<managed-bean-class>com.Proyecto.AccesoaDatos.DAOMarca</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>

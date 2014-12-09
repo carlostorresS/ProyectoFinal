@@ -16,7 +16,7 @@ import com.Proyecto.ServiciosdeDominio.DAOServices;
 public class DAORuta extends DAOManager implements DAOServices {
 
 	@Override
-	public boolean registro(Object entidad) {
+	public boolean registro(Object entidad,Object...args) {
 		PreparedStatement SQL;
 		Connection conexion = null;
 		boolean bandera = false;
@@ -113,7 +113,7 @@ public class DAORuta extends DAOManager implements DAOServices {
 	}
 
 	@Override
-	public boolean borrar(Object Entidad) {
+	public boolean borrar(Object Entidad,Object...args) {
 		PreparedStatement SQL;
 		Connection conexion = null;
 		boolean bandera = false;
