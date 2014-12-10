@@ -4,6 +4,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link href="css/estiloPagina.css" type="text/css" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <!-- css personalizados-->
+    <link href="css/freelancer.css" rel="stylesheet"/>
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <style>
@@ -15,15 +23,7 @@
 </head>
 <body>
      
-	 Registro de posiciones de la ruta
-	 	<form id="google" name="google" action="#">
- 
-		<p><label>Direcci&oacute;n: </label>
-		<input style="width:400px" type="text" id="direccion" name="direccion" value=""/>
-		<button id="pasar">Obtener coordenadas del lugar</button> 
-		</p>
-		
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script> 
     var lat = null;
@@ -36,6 +36,7 @@
 	     //obtenemos los valores en caso de tenerlos en un formulario ya guardado en la base de datos
 	     lat = jQuery('#lat').val();
 	     lng = jQuery('#long').val();
+
 	     //Asignamos al evento click del boton la funcion codeAddress
 	     jQuery('#pasar').click(function(){
 	        codeAddress();
@@ -117,27 +118,62 @@
 	       jQuery('#lat').val(latLng.lat());
 	       jQuery('#long').val(latLng.lng());
 	   
-	  }
+	  }  
     
     </script>
- 		
+    
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Mapas</a>
+            </div>
 
-<f:view>
-Soy el mapa
-    <div id="map-canvas"></div>
-  
-  <h:form>
-  <h:inputText  value="#{posicion.latitud }"  r id="lat"/>
-		 Longitud: <h:inputText value="#{posicion.longitud}" id="long"/>
-	Ruta:<h:selectOneMenu value="#{ruta.nombreRuta}">  
-    <f:selectItems value="#{daoRuta.listar()}" />  
-</h:selectOneMenu>    
-  
-  </h:form>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                 </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header >
+        <div class="container">
+         
+          </div>
+    </header>
+    
+ 		<form id="google" name="google" action="#">
  
 		
+		<input style="width:400px" type="text" id="direccion" name="direccion" value=""/>
+		<button id="pasar">Obtener coordenadas del lugar</button> 
 		
+		</form>
+ 		
+  
+    <div id="map-canvas"></div>
+  		<a href="index.jsp"><button value="volver"></button></a>
+  
+  
+  
+  
+   <form action="ServletPosiciones" method="POST">
+  <input type="text"  name="lat" id="lat"/>
+ Ruta por Id <input type="text" name="idruta" id="idruta">
+		 Longitud: <input type="text"  name="lng" id="long" />
+<input type="submit" value="registrar"/>
+</form>   
 		
-		</f:view>
 </body>
 </html>

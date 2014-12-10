@@ -1,9 +1,33 @@
 package com.Proyecto.Modelo;
 
 public class Posicion {
+	/**
+	 * @return the latitud
+	 */
+	public double getLatitud() {
+		return latitud;
+	}
+	/**
+	 * @return the longitud
+	 */
+	public double getLongitud() {
+		return longitud;
+	}
 	private int idPosicion;
-	private float latitud;
-	private float longitud;
+	private double latitud;
+	private double longitud;
+	/**
+	 * @param latitud the latitud to set
+	 */
+	public void setLatitud(double latitud) {
+		this.latitud = latitud;
+	}
+	/**
+	 * @param longitud the longitud to set
+	 */
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
+	}
 	private int idRuta;
 	/**
 	 * @return the idPosicion
@@ -20,9 +44,6 @@ public class Posicion {
 	/**
 	 * @return the latitud
 	 */
-	public float getLatitud() {
-		return latitud;
-	}
 	/**
 	 * @param latitud the latitud to set
 	 */
@@ -32,9 +53,6 @@ public class Posicion {
 	/**
 	 * @return the longitud
 	 */
-	public float getLongitud() {
-		return longitud;
-	}
 	/**
 	 * @param longitud the longitud to set
 	 */

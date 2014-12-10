@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14178092949620" configfile="/ProyectoFinal/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14178092949620" configfile="/ProyectoFinal/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index" x="360" y="300" id="pf14181803262770" outlinks="pf14181803262781 pf14181803262782" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="bienvenidaAdmin" x="634" y="163" id="pf14181803262783" outlinks="pf14181810661285" inlinks="pf14181803262782" path="/bienvenidaAdmin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="bienvenidaUsuarios" x="360" y="24" id="pf14181803262784" inlinks="pf14181803262781" path="/bienvenidaUsuarios.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="mapa" x="736" y="110" id="pf14181810661286" inlinks="pf14181810661285" path="/mapa.jsp"/>
+  <links id="pf14181803262781" target="pf14181803262784" source="pf14181803262770" outcome="users" redirect="true" fromaction="users"/>
+  <links id="pf14181803262782" target="pf14181803262783" source="pf14181803262770" outcome="admin" fromaction="admin"/>
+  <links id="pf14181810661285" target="pf14181810661286" source="pf14181803262783" outcome="mapa" fromaction="mapa"/>
+</pageflow:Pageflow>

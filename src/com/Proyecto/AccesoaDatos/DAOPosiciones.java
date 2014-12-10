@@ -1,22 +1,30 @@
 package com.Proyecto.AccesoaDatos;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.faces.context.FacesContext;
+
 import com.Proyecto.Modelo.Destino;
+import com.Proyecto.Modelo.Posicion;
+import com.Proyecto.Modelo.Ruta;
 import com.Proyecto.ServiciosdeDominio.DAOManager;
 import com.Proyecto.ServiciosdeDominio.DAOServices;
 
 public class DAOPosiciones  extends DAOManager implements DAOServices{
 
+	
+	
+	
+	
 	@Override
 	public boolean registro(Object entidad, Object... args) {
-	
 		PreparedStatement SQL;
 		Connection conexion = null;
-		boolean bandera = false;
+		boolean bandera = true;
 		try {
 			conexion = this.Conectar();
 		} catch (Exception e1) {
@@ -25,12 +33,13 @@ public class DAOPosiciones  extends DAOManager implements DAOServices{
 		}
 		try {
 			SQL = conexion
-					.prepareStatement("insert into posiciones(NombreDestino,Latitud,Longitud) values(?,?,?) ");
+					.prepareStatement("insert into posiciones(latitud,longitud,idRuta) values(?,?,?) ");
 
-			SQL.setObject(1, ((Destino) entidad).getDestino());
-			SQL.setObject(2, ((Destino)entidad).getLatitud());
-			SQL.setObject(3, ((Destino)entidad).getLongitud());
-
+			SQL.setObject(1, ((Posicion) entidad).getLatitud());
+			
+			SQL.setObject(2, ((Posicion)entidad).getLongitud());
+SQL.setObject(3, ((Ruta)args[0]).getID());
+			
 			if (SQL.execute()) {
 				bandera = true;
 			} else {

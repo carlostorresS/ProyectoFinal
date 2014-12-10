@@ -60,5 +60,33 @@
 		<managed-bean-class>com.Proyecto.AccesoaDatos.DAOPosiciones</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-action>users</from-action>
+			<from-outcome>users</from-outcome>
+			<to-view-id>/bienvenidaUsuarios.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index</display-name>
+		<from-view-id>/index.jsp</from-view-id>
+		<navigation-case>
+			<from-action>admin</from-action>
+			<from-outcome>admin</from-outcome>
+			<to-view-id>/bienvenidaAdmin.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>bienvenidaAdmin</display-name>
+		<from-view-id>/bienvenidaAdmin.jsp</from-view-id>
+		<navigation-case>
+			<from-action>mapa</from-action>
+			<from-outcome>mapa</from-outcome>
+			<to-view-id>/mapa.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>

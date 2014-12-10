@@ -6,6 +6,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
 <head>
+
+<link href="css/estiloPagina.css" type="text/css" rel="stylesheet"/>
+<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <!-- css personalizados-->
+    <link href="css/freelancer.css" rel="stylesheet"/>
+
+
+
+
+
 <script type="text/javascript">
 function showLightbox() {//formulario para registro de rutas
 	document.getElementById('over').style.display='block';
@@ -88,16 +99,54 @@ body {
 <title>Insert title here</title>
 </head>
 <body>
-<p><a href="javascript:showLightbox();">RegistrarRuta</a></p>
-<p><a href="javascript:showLightbox2();">BorrarRuta</a></p>
-<p><a href="javascript:showLightbox3();">Especificar Marca</a></p>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Gestion de rutas </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                 </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header >
+        <div class="container">
+         
+          </div>
+    </header>
+	
+
+
+
+
+
+<center><a href="javascript:showLightbox();">RegistrarRuta</a></center>
+<center><a href="javascript:showLightbox2();">BorrarRuta</a></center>
+<center><a href="javascript:showLightbox3();">Especificar Marca</center>
+
+  
 
 
 <f:view>
+<center><h:commandButton value="registrarRecorrido"  styleClass= "btn btn-default"></h:commandButton></center>
 
 
 
-<h:outputText value="hola bienvenido #{administrador.nombre}"></h:outputText>
 
    
 
@@ -107,13 +156,13 @@ body {
 
 <h:form> 
 <h:inputText value="#{ruta.nombreRuta}"></h:inputText>
-<h:commandButton value="dar de alta" action="#{daoRuta.registro(ruta,ruta) }" ></h:commandButton>
+<h:commandButton value="dar de alta" action="#{daoRuta.registro(ruta,ruta)}" ></h:commandButton>
 <a href="javascript:hideLightbox();">Cerrar</a>
 </h:form>
 	  
 	</div>
 </div>
-<div id="fade" class="fadebox">&nbsp;</div>
+<div id="fade" class="fadebox">&nbsp;</div> 
 
 
 <div id="borrar" class="overbox">
@@ -144,7 +193,7 @@ body {
 
 
 
-<h:form>
+<h:form> 
 <center>
 <div>
 Marca de camion<h:inputText value="#{marca.nombreMarca}"></h:inputText>
